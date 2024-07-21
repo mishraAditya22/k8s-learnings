@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myreactapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myreactapp
+  template:
+    metadata:
+      labels:
+        app: myreactapp
+    spec:
+      containers:
+      - name: myreactapp
+        image: adityamishra4devops/myreactapp:latest
+        ports:
+        - containerPort: 3000

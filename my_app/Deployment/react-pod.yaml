@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myreactapp
+spec:
+  containers:
+  - name: myreactapp
+    image: adityamishra4devops/myreactapp:latest
+    ports:
+    - containerPort: 3000
